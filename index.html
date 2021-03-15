@@ -25,7 +25,7 @@
                         <label for="type" class="col-sm-3 col-form-label text-warning">Vyberte typ výpočtu</label>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label col-sm-12 text-warning">
-                                <input type="radio" name="type"  id="obvod"      value="obvod"> Obvod
+                                <input type="radio" name="type"  id="obvod"      value="obvod" > Obvod
                                 <input type="radio" name="type" id="obsah"      value="obsah"> Obsah
                                 <input type="radio" name="type" id="uhlopricka" value="uhlopricka">Úhlopříčka
                             </label>
@@ -34,7 +34,7 @@
                 <div class="form-group row container  bg-dark " id="con2">
                     <label for="Strana_A" class="col-sm-3 col-form-label text-warning">Strana A</label>
                     <div class="col-sm-6  p-2">
-                        <input type="number" class="form-control bg-warning text-dark border-dark" name="A" id="A"
+                        <input type="number" class="form-control bg-warning text-dark border-dark" min="0" name="A" id="A"
                             value="0">
                     </div>
                     <div class="col-sm-3  text-center container p-2">
@@ -48,7 +48,7 @@
                 <div class="form-group row container  bg-dark " id="con2">
                     <label for="Strana_B" class="col-sm-3 col-form-label text-warning ">Strana B</label>
                     <div class="col-sm-6  p-2">
-                        <input type="number" class="form-control bg-warning text-dark border-dark" name="B" id="B"
+                        <input type="number" class="form-control bg-warning text-dark border-dark" min="0" name="B" id="B"
                             value="0">
                     </div>
                     <div class="col-sm-3  text-center container p-2">
@@ -62,7 +62,7 @@
 
                 <div class="form-group row">
                     <div class="offset-sm-5 col-sm-10">
-                        <button type="submit" class="btn btn-dark">Vypočítej</button>
+                        <button type="submit" class="btn btn-dark" id="btn1">Vypočítej</button>
                     </div>
                 </div>
             </form>
@@ -71,12 +71,14 @@
 
     </main>
     <footer class="bg-dark">
-
+        <hr>
+        <div class="container bg-muted text-warning text-center"> &lt;== &copy; 2021 - IT4 - Jureček ==&gt; </div>
     </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
