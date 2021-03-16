@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function () {
     let Pocitej ={
         stranaA: 5,
         stranaB: 2,
@@ -14,16 +14,37 @@ $(document).ready(function(){
         },
         
         uhlopricka:function(){
-            return(sqrt(pow(stranaA,2)+pow(stranaB,2)))
+            return(sqrt(pow(stranaA,2)+pow(stranaB,2)));
         }
 
     }
 
+    var vypis;
 
+  $("#btn1").on("click", function () {
+        Pocitej.stranaA = $("#A").val();
+        Pocitej.stranaB = $("#B").val();
+        Pocitej.jednotky = $("#unit").val();
+        if ($("#typ").val() == "obsah"){
+            vypis = Pocitej.obsah()+" "+Pocitej.jednotky;
+            console.log(vypis);
+            $("#vysledek").html(vypis);
+        }
+        else if ($("#typ").val() == "obvod"){
+            vypis = Pocitej.obvod()+" "+Pocitej.jednotky;
+            console.log(vypis);
+            $("#vysledek").html(vypis);
+        }
+        else if ($("#typ").val() == "uhlopricka"){
+            vypis = Pocitej.uhlopricka()+" "+Pocitej.jednotky;
+            console.log(vypis);
+            $("#vysledek").html(vypis);
+        }
+        else{
+            vypis = "Vyber typ výpočtu!!!!";
+            console.log(vypis);
+            $("#vysledek").html(vypis);
+        }
 
-  $("#btn1").click(function(){
-        let ao = $("#A").val();
-        let ab = $("#B").val();
-        alert((parseInt(ao)+parseInt(ab))*2);
-    });
+    })
 });

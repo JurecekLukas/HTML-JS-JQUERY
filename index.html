@@ -24,10 +24,10 @@
                 <div class="form-group row container  bg-dark " id="con2">
                         <label for="type" class="col-sm-3 col-form-label text-warning">Vyberte typ výpočtu</label>
                         <div class="form-check form-check-inline">
-                            <label class="form-check-label col-sm-12 text-warning">
-                                <input type="radio" name="type"  id="obvod"      > Obvod
-                                <input type="radio" name="type" id="obsah"       > Obsah
-                                <input type="radio" name="type" id="uhlopricka"  >Úhlopříčka
+                            <label class="form-check-label col-sm-12 text-warning" id="typ">
+                                <input type="radio" name="type" id="obvod"       value="obvod"     > Obvod
+                                <input type="radio" name="type" id="obsah"       value="obsah"     > Obsah
+                                <input type="radio" name="type" id="uhlopricka"  value="uhlopricka"> Úhlopříčka
                             </label>
                         </div>
                 </div>
@@ -38,10 +38,10 @@
                             value="0">
                     </div>
                     <div class="col-sm-3  text-center container p-2">
-                        <select class="form-control bg-warning text-dark border-dark" name="Aunit" id="Aunit">
-                            <option value="mm">milimetry</option>
-                            <option value="cm" selected>centimetry</option>
-                            <option value="m" >metry</option>
+                        <select class="form-control bg-warning text-dark border-dark" name="unit" id="unit">
+                            <option value="mm"          >milimetry </option>
+                            <option value="cm" selected >centimetry</option>
+                            <option value="m"           >metry     </option>
                         </select>
                     </div>
                 </div>
@@ -57,6 +57,9 @@
                     <div class="offset-sm-5 col-sm-10">
                         <button type="submit" class="btn btn-dark" id="btn1">Vypočítej</button>
                     </div>
+                </div>
+                <div>
+                    <p id="vysledek"></p>
                 </div>
             </form>
         </div>
