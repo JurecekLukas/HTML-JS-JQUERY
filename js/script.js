@@ -17,34 +17,16 @@ $(function () {
             return(sqrt(pow(stranaA,2)+pow(stranaB,2)));
         }
 
-    }
-
-    var vypis;
-
-  $("#btn1").on("click", function () {
+    };
+    $("#btn1").on("click", function () {
+        let vypis;
         Pocitej.stranaA = $("#A").val();
         Pocitej.stranaB = $("#B").val();
         Pocitej.jednotky = $("#unit").val();
-        if ($("#typ").val() == "obsah"){
-            vypis = Pocitej.obsah()+" "+Pocitej.jednotky;
-            console.log(vypis);
-            $("#vysledek").html(vypis);
-        }
-        else if ($("#typ").val() == "obvod"){
-            vypis = Pocitej.obvod()+" "+Pocitej.jednotky;
-            console.log(vypis);
-            $("#vysledek").html(vypis);
-        }
-        else if ($("#typ").val() == "uhlopricka"){
-            vypis = Pocitej.uhlopricka()+" "+Pocitej.jednotky;
-            console.log(vypis);
-            $("#vysledek").html(vypis);
-        }
-        else{
-            vypis = "Vyber typ výpočtu!!!!";
-            console.log(vypis);
-            $("#vysledek").html(vypis);
-        }
-
-    })
+        if ($("#typ").val() == 'obsah') vypis = `Obsah je: ${Pocitej.obsah()} ${Pocitej.jednotky} `;
+        if ($("#typ").val() == 'obvod') vypis = `Obvod je: ${Pocitej.obvod()} ${Pocitej.jednotky} `;
+        if ($("#typ").val() == 'uhlopricka') vypis = `Úhlopříčka je dlouhá : ${Pocitej.uhlopricka()} ${Pocitej.jednotky} `;
+        else vypis=`Nezadal jste co vypočítat`;
+        $("#vysledek").html(vypis);
+    })    
 });
