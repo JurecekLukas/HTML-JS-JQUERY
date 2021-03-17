@@ -1,86 +1,85 @@
-<!doctype html>
-<html lang="cs">
+ <!doctype html>
+ <html lang="cs">
 
-<head>
-    <title>Výpočet v obdélníku</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <head>
+     <title>Výpočet v obdélníku</title>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" href="css/style.css">
+ </head>
 
-<body class="bg-dark">
-    <header class="jumbotron bg-dark text-center">
-        <h1 class="text-warning display-3">Výpočet v obdélníku</h1>
-    </header>
-    <main class="container bg-warning" id="con">
-        <h2 class="text-dark display-4 text-center">Obdélník</h2>
-        <div class="container">
-            <form>
-                <div class="form-group row container  bg-dark " id="con2">
-                        <label for="type" class="col-sm-3 col-form-label text-warning">Vyberte typ výpočtu</label>
-                        <div class="form-check form-check-inline">
-                            <label class="form-check-label col-sm-12 text-warning" id="typ">
-                                <input type="radio" name="type" id="obvod"       value="obvod"    checked > Obvod
-                                <input type="radio" name="type" id="obsah"       value="obsah"     > Obsah
-                                <input type="radio" name="type" id="uhlopricka"  value="uhlopricka"> Úhlopříčka
-                            </label>
-                        </div>
-                </div>
-                <div class="form-group row container  bg-dark " id="con2">
-                    <label for="Strana_A" class="col-sm-3 col-form-label text-warning">Strana A</label>
-                    <div class="col-sm-6  p-2">
-                        <input type="number" class="form-control bg-warning text-dark border-dark" min="0" name="A" id="A"
-                            value="0">
-                    </div>
-                    <div class="col-sm-3  text-center container p-2">
-                        <select class="form-control bg-warning text-dark border-dark" name="unit" id="unit">
-                            <option value="mm"          >milimetry </option>
-                            <option value="cm" selected >centimetry</option>
-                            <option value="m"           >metry     </option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group row container  bg-dark " id="con2">
-                    <label for="Strana_B" class="col-sm-3 col-form-label text-warning ">Strana B</label>
-                    <div class="col-sm-6  p-2">
-                        <input type="number" class="form-control bg-warning text-dark border-dark" min="0" name="B" id="B"
-                            value="0">
-                    </div>
-                </div>
+ <body class="bg-dark">
+     <header class="jumbotron bg-dark text-center">
+         <h1 class="text-warning display-3">Výpočet v obdélníku</h1>
+     </header>
+     <main class="container bg-warning" id="con">
+         <h2 class="text-dark display-4 text-center">Obdélník</h2>
+         <div class="container">
+             <form>
+                 <div class="form-group row container  bg-dark " id="con2">
+                     <label for="type" class="col-sm-3 col-form-label text-warning">Vyberte typ výpočtu</label>
+                     <div class="form-check form-check-inline">
+                         <label class="form-check-label col-sm-12 text-warning" id="typ">
+                             <input type="radio" name="type" id="obvod" value="obvod" checked> Obvod
+                             <input type="radio" name="type" id="obsah" value="obsah"> Obsah
+                             <input type="radio" name="type" id="uhlopricka" value="uhlopricka"> uhlopricka
+                         </label>
+                     </div>
+                 </div>
+                 <div class="form-group row container  bg-dark " id="con2">
+                     <label for="Strana_A" class="col-sm-3 col-form-label text-warning">Strana A</label>
+                     <div class="col-sm-6  p-2">
+                         <input type="number" class="form-control bg-warning text-dark border-dark" min="0" name="A"
+                             id="A" value="0">
+                     </div>
+                     <div class="col-sm-3  text-center container p-2">
+                         <select class="form-control bg-warning text-dark border-dark" name="unit" id="unit">
+                             <option value="mm">milimetry </option>
+                             <option value="cm" selected>centimetry</option>
+                             <option value="m">metry </option>
+                         </select>
+                     </div>
+                 </div>
+                 <div class="form-group row container  bg-dark " id="con2">
+                     <label for="Strana_B" class="col-sm-3 col-form-label text-warning ">Strana B</label>
+                     <div class="col-sm-6  p-2">
+                         <input type="number" class="form-control bg-warning text-dark border-dark" min="0" name="B"
+                             id="B" value="0">
+                     </div>
+                 </div>
 
-                <div class="form-group row">
-                    <div class="offset-sm-5 col-sm-10">
-                        <button type="submit" class="btn btn-dark" id="btn1">Vypočítej</button>
-                    </div>
-                </div>
-                <div>
-                    <p id="vysledek"></p>
-                </div>
-            </form>
-        </div>
-        <br>
+                 <div class="form-group row">
+                     <div class="offset-sm-5 col-sm-10">
+                         <button type="button" class="btn btn-dark" id="btn1">Vypočítej</button>
+                     </div>
+                 </div>
 
-    </main>
-    <footer class="bg-dark">
-        <hr>
-        <div class="container bg-muted text-warning text-center"> &lt;== &copy; 2021 - IT4 - Jureček ==&gt; </div>
-    </footer>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-</body>
+                 <br>
+                 <div class="container text-center bg-dark text-warning" id="con2">
+                     <h4>Výsledek příkladu je:</h4>
+                     <h4 id="vysledek"></h4>
+                 </div>
+                 <hr>
+             </form>
+         </div>
+     </main>
+     <footer class="bg-dark">
+         <hr>
+         <div class="container bg-muted text-warning text-center"> &lt;== &copy; 2021 - IT4 - Jureček ==&gt; </div>
+     </footer>
 
-</html>
+     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+     <script src="js/script.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+     </script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+     </script>
+ </body>
+
+ </html>
